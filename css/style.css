@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 7px #00000073;
+    animation: circulo .4s ease-out forwards;
+    display: none;
+    color: greenyellow;
+}
+
+.modalResultado {
+    text-align: center;
+    background-color: white;
+    border: 2px solid #000000;
+    border-radius: 0.75em;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0 10px;
+    flex-direction: column;
+    height: 200px;
+}
+
+.tempo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes circulo {
+    0% {
+      width: 0;
+      height: 0;
+    }
+  
+    100% {
+        width: 300px;
+        height: 300px;
+    }
+  }
+
+/* BOTÃO */
+
+/* From cssbuttons.io */
+button {
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #000000;
+   font-size: 17px;
+   font-weight: bold;
+   border: none;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+  }
+  
+  .button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+   transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+   transform: translateY(0);
+  }
